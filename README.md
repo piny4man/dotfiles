@@ -1,3 +1,3 @@
 # dotfiles
 
-A collection of personal dotfiles configuration files
+A collection of personal Arch Linux configuration files
