@@ -47,7 +47,8 @@ keys = [
     Key([mod, 'control'], 'q', lazy.shutdown(), desc='Shutdown Qtile'),
 
     # Rofi
-    Key([mod], 'space', lazy.spawn('rofi -show run -show-icons')),
+    Key([mod], 'space', lazy.spawn('rofi -show drun -show-icons')),
+    Key([mod, 'control'], 'space', lazy.spawn('rofi -show run -show-icons')),
     Key([mod, 'shift'], 'space', lazy.spawn('rofi -show')),
 
     # Browser
@@ -55,13 +56,13 @@ keys = [
     Key([mod, 'shift'], 'b', lazy.spawn('burpsuite')),
 
     # Volume
-    Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer --decrease 5')),
-    Key([], 'XF86AudioRaiseVolume', lazy.spawn('pamixer --increase 5')),
+    Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer --decrease 1')),
+    Key([], 'XF86AudioRaiseVolume', lazy.spawn('pamixer --increase 1')),
     Key([], 'XF86AudioMute', lazy.spawn('pamixer --toggle-mute')),
 
     # Brightness
-    Key([], 'XF86MonBrightnessUp', lazy.spawn('brightnessctl set +10%')),
-    Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl set 10%-')),
+    Key([], 'XF86MonBrightnessUp', lazy.spawn('brightnessctl set +5%')),
+    Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl set 5%-')),
 
     # File System
     Key([mod], 'e', lazy.spawn('thunar')),

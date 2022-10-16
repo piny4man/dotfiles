@@ -16,9 +16,9 @@ udiskie -t &
 # Remove tearing
 xrandr --output eDP --set TearFree on &
 # Wallpaper
-feh --bg-fill Images/wallpaper.jpg &
+feh --bg-fill Images/Wallpapers/mountain_pixel.png &
 #Slimbook
-slimbookbattery &
+#slimbookbattery &
 slimbookamdcontroller &
 #Keyring daemon
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh) &
