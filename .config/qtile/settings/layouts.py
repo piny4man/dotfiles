@@ -5,6 +5,7 @@ from .theme import colors
 # Layouts and layout rules
 layout_conf = {
     'border_focus': '#ffbf00',
+    'border_normal': colors['dark'],
     'border_width': 1,
     'margin': 2
 }
@@ -21,7 +22,7 @@ layouts = [
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
-    # layout.VerticalTile(),
+    layout.VerticalTile(**layout_conf),
     # layout.Zoomy(),
 ]
 
