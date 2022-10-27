@@ -54,9 +54,9 @@ primary_widgets = [
     widget.TextBox(
         foreground=colors['dark'],
         background=colors['color4'],
-        fontsize=18,
+        fontsize=25,
         padding=4,
-        text=''
+        text=''
     ),
     widget.CheckUpdates(
         background=colors['color4'],
@@ -157,7 +157,7 @@ secondary_widgets = [
 ]
 
 widget_defaults = dict(
-    font='Fira Code',
+    font='Hack Nerd Font Mono',
     fontsize=18,
     padding=2,
 )
