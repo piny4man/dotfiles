@@ -56,7 +56,7 @@ primary_widgets = [
         background=colors['color4'],
         fontsize=18,
         padding=4,
-        text=''
+        text=''
     ),
     widget.CheckUpdates(
         background=colors['color4'],
