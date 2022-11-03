@@ -1,0 +1,23 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+
+[username]
+style_root = "yellow bold"
+
+[sudo]
+style = "bold green"
+symbol = "🔒 "
+format = "[$symbol]($style)"
+disabled = false
+
+[localip]
+ssh_only = true
+format = "👾 [$localipv4](bold blue) "
+disabled = false
