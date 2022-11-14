@@ -1,0 +1,136 @@
+{
+  "workbench.iconTheme": "bearded-icons",
+  "editor.fontFamily": "'FiraCode Nerd Font'",
+  "sync.gist": "558b9a0c1af8bdf589e3217b6ec11ac6",
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "breadcrumbs.icons": false,
+  "breadcrumbs.enabled": false,
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "redhat.telemetry.enabled": false,
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.linkedEditing": true,
+  "window.zoomLevel": 1,
+  "editor.fontSize": 12,
+  "debug.console.fontSize": 12,
+  "scm.inputFontSize": 12,
+  "markdown.preview.fontSize": 12,
+  "terminal.integrated.fontSize": 12,
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "rust-analyzer.trace.extension": true,
+  "terminal.integrated.shellIntegration.history": 0,
+  "todo-tree.highlights.defaultHighlight": {
+      "icon": "alert",
+      "type": "text-and-comment",
+      "foreground": "black",
+      "background": "white",
+      "opacity": 50,
+      "iconColour": "blue",
+      "gutterIcon": true
+    },
+    "todo-tree.highlights.customHighlight": {
+      "TODO": {
+        "icon": "bookmark",
+        "foreground": "black",
+        "background": "yellow",
+        "iconColour": "yellow"
+      },
+      "NOTE": {
+        "icon": "note",
+        "foreground": "white",
+        "background": "cornflowerblue",
+        "iconColour": "cornflowerblue"
+      },
+      "USEFUL": {
+        "icon": "verified",
+        "foreground": "black",
+        "background": "mediumaquamarine",
+        "iconColour": "mediumaquamarine"
+      },
+      "COMMENT": {
+        "icon": "comment",
+        "foreground": "white",
+        "background": "gray",
+        "iconColour": "white"
+      },
+      "LEARN": {
+        "icon": "bookmark",
+        "foreground": "white",
+        "background": "hotpink",
+        "iconColour": "hotpink"
+      },
+      "FIXME": {
+        "icon": "tools",
+        "foreground": "crimson",
+        "background": "burlywood",
+        "iconColour": "burlywood"
+      },
+      "RECHECK": {
+        "icon": "code-review",
+        "foreground": "white",
+        "background": "chocolate",
+        "iconColour": "chocolate"
+      },
+      "INCOMPLETE": {
+        "icon": "alert",
+        "foreground": "white",
+        "background": "mediumvioletred",
+        "iconColour": "mediumvioletred"
+      },
+      "BUG": {
+        "icon": "bug",
+        "foreground": "white",
+        "background": "crimson",
+        "iconColour": "crimson"
+      },
+      "SEE NOTES": {
+        "icon": "note",
+        "foreground": "white",
+        "background": "teal",
+        "iconColour": "teal"
+      },
+      "POST": {
+        "icon": "share",
+        "foreground": "white",
+        "background": "green",
+        "iconColour": "green"
+      },
+      "[ ]": {
+        "icon": "check",
+        "foreground": "black",
+        "background": "white",
+        "iconColour": "yellow"
+      },
+      "[x]": {
+        "icon": "check",
+        "foreground": "white",
+        "background": "green",
+        "iconColour": "green"
+      }
+    },
+    "todo-tree.general.tags": [
+      "BUG",
+      "SEE NOTES",
+      "HACK",
+      "FIXME",
+      "RECHECK",
+      "INCOMPLETE",
+      "TODO",
+      "NOTE",
+      "POST",
+      "USEFUL",
+      "LEARN",
+      "COMMENT",
+      "[ ]",
+      "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+    "git.confirmSync": false,
+    "window.menuBarVisibility": "toggle"
+}
