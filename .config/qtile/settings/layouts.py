@@ -7,7 +7,8 @@ layout_conf = {
     'border_focus': '#ffbf00',
     'border_normal': colors['dark'],
     'border_width': 1,
-    'margin': 2
+    'margin': 2,
+    'grow_amount': 1,
 }
 
 layouts = [
