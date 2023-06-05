@@ -48,6 +48,31 @@ primary_widgets = [
         background=colors['dark']
     ),
     *workspaces(),
+    widget.NetGraph(
+        graph_color=colors['color4'],
+        fill_color=colors['color4'],
+        background=colors['dark'],
+        border_color=colors['dark'],
+        line_width=1,
+        border_width=1,
+        margin_y=3
+    ),
+    widget.CPUGraph(
+        graph_color=colors['color3'],
+        fill_color=colors['color3'],
+        background=colors['dark'],
+        border_color=colors['dark'],
+        border_width=1,
+        margin_y=4
+    ),
+    widget.MemoryGraph(
+        graph_color=colors['color2'],
+        fill_color=colors['color2'],
+        background=colors['dark'],
+        border_color=colors['dark'],
+        border_width=1,
+        margin_y=3
+    ),
     widget.Image(
         filename=path.join(qtile_path, 'img', 'bar4.png')
     ),
@@ -83,7 +108,8 @@ primary_widgets = [
         background=colors['color2'],
         foreground=colors['dark'],
         padding=6,
-        icon_size=18
+        icon_size=18,
+        opaticy=0
     ),
     widget.Image(
         filename=path.join(qtile_path, 'img', 'bar1.png')
@@ -102,31 +128,6 @@ secondary_widgets = [
         background=colors['dark']
     ),
     *workspaces(),
-    widget.NetGraph(
-        graph_color=colors['color4'],
-        fill_color=colors['color4'],
-        background=colors['dark'],
-        border_color=colors['dark'],
-        line_width=1,
-        border_width=1,
-        margin_y=3
-    ),
-    widget.CPUGraph(
-        graph_color=colors['color3'],
-        fill_color=colors['color3'],
-        background=colors['dark'],
-        border_color=colors['dark'],
-        border_width=1,
-        margin_y=4
-    ),
-    widget.MemoryGraph(
-        graph_color=colors['color2'],
-        fill_color=colors['color2'],
-        background=colors['dark'],
-        border_color=colors['dark'],
-        border_width=1,
-        margin_y=3
-    ),
     widget.Image(
         filename=path.join(qtile_path, 'img', 'bar3_nord.png')
     ),

@@ -23,7 +23,7 @@ layouts = [
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
-    layout.VerticalTile(**layout_conf),
+    # layout.VerticalTile(**layout_conf),
     # layout.Zoomy(),
 ]
 

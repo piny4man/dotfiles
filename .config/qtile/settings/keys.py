@@ -1,7 +1,7 @@
 # Qtile keybindings
 
 from libqtile.config import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
@@ -46,18 +46,24 @@ keys = [
     Key([mod, 'control'], 'r', lazy.reload_config(), desc='Reload the config'),
     Key([mod, 'control'], 'q', lazy.shutdown(), desc='Shutdown Qtile'),
 
+    #Lock screen
+    Key([mod], 'l', lazy.spawn('betterlockscreen --lock dimpixel')),
+
+    #Flameshot
+    Key([mod], 's', lazy.spawn('flameshot gui')),
+
     # Rofi
     Key([mod], 'space', lazy.spawn('rofi -show drun -show-icons')),
     Key([mod, 'control'], 'space', lazy.spawn('rofi -show run -show-icons')),
     Key([mod, 'shift'], 'space', lazy.spawn('rofi -show')),
 
     # Browser
-    Key([mod], 'b', lazy.spawn('firefox')),
+    Key([mod], 'b', lazy.spawn('firefox-developer-edition')),
     Key([mod, 'shift'], 'b', lazy.spawn('burpsuite')),
 
     # Volume
-    Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer --decrease 1')),
-    Key([], 'XF86AudioRaiseVolume', lazy.spawn('pamixer --increase 1')),
+    Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer --decrease 2')),
+    Key([], 'XF86AudioRaiseVolume', lazy.spawn('pamixer --increase 2')),
     Key([], 'XF86AudioMute', lazy.spawn('pamixer --toggle-mute')),
 
     # Brightness
