@@ -5,7 +5,7 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/env:$HOME/.ca
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-#ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="dstufft"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -40,7 +40,7 @@ alias ls='lsd --group-dirs=first'
 alias cat='bat'
 #alias find='fd'
 alias recordScreen='wf-recorder -g "$(slurp)" -f ~/Videos/$(date +%s).mp4'
-
+alias weather='curl wttr.in/Sant+Pere+de+Ribes'
 # Custom functions
 function vermiip() {
   echo "Tu IP privada es: $(hostname -i | awk '{print $1}')"
@@ -55,8 +55,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-eval "$(starship init zsh)"
 source /home/piny4/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
