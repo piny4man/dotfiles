@@ -73,50 +73,39 @@ primary_widgets = [
         border_width=1,
         margin_y=3
     ),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar4.png')
-    ),
     widget.TextBox(
-        foreground=colors['dark'],
-        background=colors['color4'],
+        foreground=colors['color3'],
+        background=colors['dark'],
         fontsize=25,
         padding=4,
-        text=''
+        text=''
     ),
     widget.CheckUpdates(
-        background=colors['color4'],
-        colour_have_updates=colors['dark'],
-        colour_no_updates=colors['color1'],
+        background=colors['dark'],
+        colour_have_updates=colors['color3'],
+        colour_no_updates=colors['color3'],
         no_update_string='0',
         display_format='{updates}',
         update_interval=1800,
         custom_command='checkupdates',
         padding=4
     ),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar3.png')
-    ),
-    widget.Clock(
-        foreground=colors['dark'],
-        background=colors['color3'],
-        format='%d/%m/%Y - %H:%M'
-    ),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar2.png')
-    ),
     widget.Systray(
-        background=colors['color2'],
+        background=colors['dark'],
         foreground=colors['dark'],
-        padding=6,
-        icon_size=18,
+        padding=8,
+        icon_size=16,
         opaticy=0
     ),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar1.png')
+    widget.Clock(
+        foreground=colors['color3'],
+        background=colors['dark'],
+        format='%d/%m/%Y - %H:%M',
+        padding=8
     ),
     widget.CurrentLayoutIcon(
-        foreground=colors['dark'],
-        background=colors['color1'],
+        foreground=colors['color1'],
+        background=colors['dark'],
         scale=0.65
     )
 ]
@@ -159,7 +148,7 @@ secondary_widgets = [
 
 widget_defaults = dict(
     font='Hack Nerd Font Mono',
-    fontsize=18,
+    fontsize=16,
     padding=2,
 )
 extension_defaults = widget_defaults.copy()
