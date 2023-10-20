@@ -24,7 +24,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, widget
+import os
+import subprocess
+
+from libqtile import bar, hook, layout, widget
 from libqtile.config import Screen
 from libqtile.lazy import lazy
 
@@ -34,6 +37,11 @@ from settings.layouts import layouts, floating_layout
 from settings.widgets import widget_defaults
 from settings.screens import screens
 from settings.mouse import mouse
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.Popen([home])
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
@@ -59,4 +67,4 @@ wl_input_rules = None
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = 'LG3D'
+wmname = 'TilingPiny4'

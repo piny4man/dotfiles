@@ -13,7 +13,7 @@ def workspaces():
     return [
         widget.GroupBox(
             **base(fg='text'),
-            font='Hack Nerd Font',
+            font='Hack Nerd Font Regular',
             center_aligned=True,
             margin_y=3,
             margin_x=0,
@@ -35,7 +35,7 @@ def workspaces():
         widget.WindowName(
             foreground=colors['grey'],
             background=colors['dark'],
-            font='Fira Code Bold',
+            font='Hack Nerd Font Regular',
             fontsize=14,
             padding=5
         )
@@ -73,6 +73,12 @@ primary_widgets = [
         border_width=1,
         margin_y=3
     ),
+    widget.Clock(
+        foreground=colors['color3'],
+        background=colors['dark'],
+        format='%a %d %b - %H:%M',
+        padding=8
+    ),
     widget.TextBox(
         foreground=colors['color3'],
         background=colors['dark'],
@@ -90,6 +96,11 @@ primary_widgets = [
         custom_command='checkupdates',
         padding=4
     ),
+    widget.CurrentLayoutIcon(
+        foreground=colors['color1'],
+        background=colors['dark'],
+        scale=0.65
+    ),
     widget.Systray(
         background=colors['dark'],
         foreground=colors['dark'],
@@ -97,17 +108,6 @@ primary_widgets = [
         icon_size=16,
         opaticy=0
     ),
-    widget.Clock(
-        foreground=colors['color3'],
-        background=colors['dark'],
-        format='%d/%m/%Y - %H:%M',
-        padding=8
-    ),
-    widget.CurrentLayoutIcon(
-        foreground=colors['color1'],
-        background=colors['dark'],
-        scale=0.65
-    )
 ]
 
 secondary_widgets = [
@@ -117,9 +117,6 @@ secondary_widgets = [
         background=colors['dark']
     ),
     *workspaces(),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar3_nord.png')
-    ),
     widget.OpenWeather(
         location='Sant Pere de Ribes',
         app_key='c8ddca884325c9cb88de485e5a89baa5',
@@ -128,22 +125,16 @@ secondary_widgets = [
         format='{icon} {temp}°C {humidity}% ',
         margin_x=8,
     ),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar2.png')
+    widget.CurrentLayoutIcon(
+        foreground=colors['color1'],
+        background=colors['dark'],
+        scale=0.65
     ),
     widget.Clock(
-        foreground=colors['dark'],
-        background=colors['color2'],
-        format='%H:%M'
+        foreground=colors['color3'],
+        background=colors['dark'],
+        format='%a %d %b - %H:%M'
     ),
-    widget.Image(
-        filename=path.join(qtile_path, 'img', 'bar1.png')
-    ),
-    widget.CurrentLayoutIcon(
-        background=colors['color1'],
-        foreground=colors['text'],
-        scale=0.65
-    )
 ]
 
 widget_defaults = dict(
