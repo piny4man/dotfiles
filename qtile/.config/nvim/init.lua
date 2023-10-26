@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("remaps")
-require("editor")
+require("base")
 
 -- lazy.nvim setup
 require("lazy").setup({
