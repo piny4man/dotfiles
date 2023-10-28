@@ -33,6 +33,45 @@ return {
         opts = {
             signs = true,
             sign_priority = 8
+        },
+    },
+    -- Fuzzy finder
+    {
+        'nvim-telescope/telescope.nvim',
+        branch = '0.1.x',
+    },
+    -- Parser
+    {
+        'nvim-treesitter/nvim-treesitter',
+    },
+    -- Shortcuts help
+    {
+        'folke/which-key.nvim',
+        lazy = true,
+    },
+    -- Buffer line (tabs)
+    {
+        'akinsho/bufferline.nvim',
+        dependencies = 'nvim-tree/nvim-web-devicons',
+    },
+    -- Status line
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = 'nvim-tree/nvim-web-devicons',
+    },
+    -- File Tree
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
+    },
+    {
+        'goolord/alpha-nvim',
+        lazy = true,
     },
 }

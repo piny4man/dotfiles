@@ -20,3 +20,11 @@ require("base")
 require("lazy").setup({
     spec = { import = "plugins"}
 })
+require("lspzero")
+require("treesitter")
+require("whichkey")
+require("bufferline-config")
+require("lualine-config")
+require("alpha-config")
+-- TODO Configure neo-tree
+
