@@ -26,5 +26,6 @@ require("whichkey")
 require("bufferline-config")
 require("lualine-config")
 require("alpha-config")
+require("git-config")
 -- TODO Configure neo-tree
 
