@@ -4,10 +4,10 @@ from .theme import colors
 
 # Layouts and layout rules
 layout_conf = {
-    'border_focus': '#ffbf00',
+    'border_focus': '#b7bdf8',
     'border_normal': colors['dark'],
     'border_width': 1,
-    'margin': 2,
+    'margin': 1,
     'grow_amount': 1,
 }
 

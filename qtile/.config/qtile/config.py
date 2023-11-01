@@ -27,9 +27,7 @@
 import os
 import subprocess
 
-from libqtile import bar, hook, layout, widget
-from libqtile.config import Screen
-from libqtile.lazy import lazy
+from libqtile import hook
 
 from settings.keys import mod, keys
 from settings.groups import groups
@@ -38,10 +36,12 @@ from settings.widgets import widget_defaults
 from settings.screens import screens
 from settings.mouse import mouse
 
+
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.Popen([home])
+
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list

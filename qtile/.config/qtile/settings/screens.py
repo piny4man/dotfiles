@@ -6,8 +6,10 @@ from libqtile.log_utils import logger
 from .widgets import primary_widgets, secondary_widgets
 import subprocess
 
+
 def status_bar(widgets):
-    return bar.Bar(widgets,26)
+    return bar.Bar(widgets, 26, background="#181926")
+
 
 screens = [Screen(top=status_bar(primary_widgets))]
 

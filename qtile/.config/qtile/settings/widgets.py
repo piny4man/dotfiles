@@ -3,11 +3,13 @@ from os import path
 from .path import qtile_path
 from .theme import colors
 
+
 def base(fg='text', bg='dark'):
     return {
         'foreground': colors[fg],
         'background': colors[bg]
     }
+
 
 def workspaces():
     return [
@@ -20,14 +22,14 @@ def workspaces():
             padding_y=8,
             padding_x=8,
             borderwidth=2,
-            active=colors['active'],
+            active=colors['text'],
             inactive=colors['inactive'],
             rounded=False,
-            highlight_method='line',
+            highlight_method='block',
             urgent_alert_method='line',
             urgent_border=colors['urgent'],
-            this_current_screen_border=colors['focus'],
-            this_screen_border=colors['grey'],
+            this_current_screen_border=colors['activeBg'],
+            this_screen_border=colors['unfocusedActiveBg'],
             other_current_screen_border=colors['dark'],
             other_screen_border=colors['dark'],
             disable_drag=True,
@@ -35,11 +37,12 @@ def workspaces():
         widget.WindowName(
             foreground=colors['grey'],
             background=colors['dark'],
-            font='Hack Nerd Font Regular',
+            font='Hack Nerd Font',
             fontsize=14,
             padding=5
         )
     ]
+
 
 primary_widgets = [
     widget.Image(
@@ -133,7 +136,7 @@ secondary_widgets = [
     widget.Clock(
         foreground=colors['text'],
         background=colors['dark'],
-        format='%a %d %b - %H:%M'
+        format='%H:%M'
     ),
 ]
 

@@ -46,10 +46,10 @@ keys = [
     Key([mod, 'control'], 'r', lazy.reload_config(), desc='Reload the config'),
     Key([mod, 'control'], 'q', lazy.shutdown(), desc='Shutdown Qtile'),
 
-    #Lock screen
+    # Lock screen
     Key([mod], 'l', lazy.spawn('betterlockscreen --lock dimpixel')),
 
-    #Flameshot
+    # Flameshot
     Key([mod], 's', lazy.spawn('flameshot gui')),
 
     # Rofi
@@ -59,7 +59,10 @@ keys = [
 
     # Browser
     Key([mod], 'b', lazy.spawn('firefox-developer-edition')),
-    Key([mod, 'shift'], 'b', lazy.spawn('burpsuite')),
+    Key([mod, 'shift'], 'b', lazy.spawn('brave')),
+
+    # Notes
+    Key([mod], 'n', lazy.spawn('standard-notes')),
 
     # Volume
     Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer --decrease 2')),
