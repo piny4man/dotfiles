@@ -43,7 +43,7 @@ def workspaces():
 
 primary_widgets = [
     widget.Image(
-        filename=path.join(qtile_path, 'img', 'pineskull_nord.png'),
+        filename=path.join(qtile_path, 'img', 'pineskull-mauve.png'),
         margin_x=8,
         background=colors['dark']
     ),
@@ -74,13 +74,13 @@ primary_widgets = [
         margin_y=3
     ),
     widget.Clock(
-        foreground=colors['color3'],
+        foreground=colors['text'],
         background=colors['dark'],
-        format='%a %d %b - %H:%M',
+        format='%a %d %b %H:%M',
         padding=8
     ),
     widget.TextBox(
-        foreground=colors['color3'],
+        foreground=colors['text'],
         background=colors['dark'],
         fontsize=25,
         padding=4,
@@ -88,8 +88,8 @@ primary_widgets = [
     ),
     widget.CheckUpdates(
         background=colors['dark'],
-        colour_have_updates=colors['color3'],
-        colour_no_updates=colors['color3'],
+        colour_have_updates=colors['text'],
+        colour_no_updates=colors['grey'],
         no_update_string='0',
         display_format='{updates}',
         update_interval=1800,
@@ -97,7 +97,7 @@ primary_widgets = [
         padding=4
     ),
     widget.CurrentLayoutIcon(
-        foreground=colors['color1'],
+        foreground=colors['text'],
         background=colors['dark'],
         scale=0.65
     ),
@@ -112,7 +112,7 @@ primary_widgets = [
 
 secondary_widgets = [
     widget.Image(
-        filename=path.join(qtile_path, 'img', 'pineskull_nord.png'),
+        filename=path.join(qtile_path, 'img', 'pineskull-mauve.png'),
         margin_x=8,
         background=colors['dark']
     ),
@@ -126,12 +126,12 @@ secondary_widgets = [
         margin_x=8,
     ),
     widget.CurrentLayoutIcon(
-        foreground=colors['color1'],
+        foreground=colors['text'],
         background=colors['dark'],
         scale=0.65
     ),
     widget.Clock(
-        foreground=colors['color3'],
+        foreground=colors['text'],
         background=colors['dark'],
         format='%a %d %b - %H:%M'
     ),
