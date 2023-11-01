@@ -17,6 +17,13 @@ vim.opt.showmatch = true
 -- Whitespace stuff
 vim.opt.wrap = true
 vim.opt.tabstop = 4
+vim.cmd [[
+augroup FileExtensionSettings
+    autocmd!
+    autocmd BufRead,BufNewFile *.js,*.ts,*.tsx,*.jsx,*.svelte,*.astro setlocal tabstop=2
+    autocmd BufRead,BufNewFile *.html setlocal tabstop=2
+augroup END
+]]
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
@@ -24,3 +31,10 @@ vim.opt.expandtab = true
 -- Identing
 vim.opt.smartindent = true
 
+-- Restore cursor on exit
+vim.cmd([[
+  augroup RestoreCursorShapeOnExit
+      autocmd!
+      autocmd VimLeave * set guicursor=a:hor20
+  augroup END
+]])
