@@ -1,6 +1,8 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
     build = ":TSUpdate",
-    ensure_installed = { "rust", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "python", "tsx", "yaml", "html", "css", "bash", "prisma", "graphql", "markdown", "markdown_inline", "dockerfile", "gitignore", "json", "svelte", "astro" },
+    ensure_installed = { "rust", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "python", "tsx", "yaml",
+        "html", "css", "bash", "prisma", "graphql", "markdown", "markdown_inline", "dockerfile", "gitignore", "json",
+        "svelte", "astro" },
     sync_install = false,
     auto_install = true,
     ignore_install = { "" },
@@ -15,4 +17,3 @@ require'nvim-treesitter.configs'.setup {
         max_file_lines = nil,
     }
 }
-
