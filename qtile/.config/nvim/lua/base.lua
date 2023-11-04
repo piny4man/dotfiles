@@ -38,3 +38,8 @@ vim.cmd([[
       autocmd VimLeave * set guicursor=a:hor20
   augroup END
 ]])
+
+-- Neovide custom configuration
+if vim.g.neovide then
+    vim.o.guifont = "FiraCode Nerd Font:h10"
+end

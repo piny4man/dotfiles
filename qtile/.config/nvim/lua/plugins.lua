@@ -16,6 +16,9 @@ return {
         },
     },
     {
+        'RRethy/vim-illuminate',
+    },
+    {
         "folke/neodev.nvim", opts = {}
     },
     -- Fuzzy finder
@@ -26,6 +29,10 @@ return {
     -- Parser
     {
         'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+    },
+    {
+        'nvim-treesitter/nvim-treesitter-textobjects',
     },
     -- Shortcuts help
     {
@@ -144,5 +151,27 @@ return {
     {
         'rcarriga/nvim-dap-ui',
         lazy = true
+    },
+    -- Autocomplete
+    {
+        'hrsh7th/cmp-nvim-lsp',
+    },
+    {
+        'hrsh7th/cmp-buffer',
+    },
+    {
+        'hrsh7th/cmp-path',
+    },
+    {
+        'hrsh7th/cmp-cmdline',
+    },
+    {
+        'hrsh7th/nvim-cmp',
+    },
+    {
+        'L3MON4D3/LuaSnip'
+    },
+    {
+        'rafamadriz/friendly-snippets'
     },
 }
