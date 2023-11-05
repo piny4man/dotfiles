@@ -19,6 +19,12 @@ return {
         'RRethy/vim-illuminate',
     },
     {
+        'tzachar/local-highlight.nvim',
+        config = function()
+            require('local-highlight').setup()
+        end
+    },
+    {
         "folke/neodev.nvim", opts = {}
     },
     -- Fuzzy finder
