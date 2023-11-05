@@ -15,15 +15,25 @@ return {
             sign_priority = 8
         },
     },
+    -- Highlighter
     {
         'RRethy/vim-illuminate',
     },
+    -- Auto pair
     {
-        'tzachar/local-highlight.nvim',
-        config = function()
-            require('local-highlight').setup()
-        end
+        'echasnovski/mini.pairs', version = '*'
     },
+    -- Troubles messages in a pretty way
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
+    -- Other DEV dependencies
     {
         "folke/neodev.nvim", opts = {}
     },
@@ -64,10 +74,20 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
     },
+    -- Alpha dashboard
     {
         'goolord/alpha-nvim',
         lazy = true,
     },
+    -- Comments toggler
+    {
+        'numToStr/Comment.nvim',
+        opts = {
+            -- add any options here
+        },
+        lazy = false,
+    },
+    -- LSP configuration
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -90,6 +110,11 @@ return {
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },
         }
+    },
+    {
+        'j-hui/fidget.nvim',
+        tag = 'legacy',
+        event = 'LspAttach',
     },
     -- Session management. This saves your session in the background,
     -- keeping track of open buffers, window arrangement, and more.

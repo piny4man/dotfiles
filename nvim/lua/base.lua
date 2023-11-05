@@ -20,8 +20,8 @@ vim.opt.tabstop = 4
 vim.cmd [[
 augroup FileExtensionSettings
     autocmd!
-    autocmd BufRead,BufNewFile *.js,*.ts,*.tsx,*.jsx,*.svelte,*.astro setlocal tabstop=2
-    autocmd BufRead,BufNewFile *.html setlocal tabstop=2
+    autocmd BufRead,BufNewFile *.js,*.ts,*.tsx,*.jsx,*.svelte,*.astro setlocal shiftwidth=2
+    autocmd BufRead,BufNewFile *.html setlocal shiftwidth=2
 augroup END
 ]]
 vim.opt.shiftwidth = 4
@@ -30,7 +30,7 @@ vim.opt.expandtab = true
 
 -- Identing
 vim.opt.smartindent = true
-
+vim.opt.smarttab = true
 -- Restore cursor on exit
 vim.cmd([[
   augroup RestoreCursorShapeOnExit
