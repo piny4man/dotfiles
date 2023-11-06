@@ -1,4 +1,4 @@
-return {
+require("mini.pairs").setup({
     modes = { insert = true, command = false, terminal = false },
 
     -- Global mappings. Each right hand side should be a pair information, a
@@ -21,4 +21,4 @@ return {
         ["'"] = { action = 'closeopen', pair = "''", neigh_pattern = '[^%a\\].', register = { cr = false } },
         ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^\\].', register = { cr = false } },
     },
-}
+})
