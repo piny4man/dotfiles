@@ -52,7 +52,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-    return "Pinya.dev Industries\nEscaping the mainstream"
+    return "Pinya.dev Industries   Escaping the mainstream"
 end
 
 dashboard.section.footer.val = footer()

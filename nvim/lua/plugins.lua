@@ -23,6 +23,10 @@ return {
     {
         'echasnovski/mini.pairs', version = '*'
     },
+    -- Movement
+    {
+        'echasnovski/mini.move', version = '*'
+    },
     -- Troubles messages in a pretty way
     {
         "folke/trouble.nvim",
