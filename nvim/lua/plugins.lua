@@ -24,6 +24,11 @@ return {
     {
         'echasnovski/mini.move', version = '*'
     },
+    -- Multi selection
+    {
+        'mg979/vim-visual-multi',
+        branch = 'master'
+    },
     -- Troubles messages in a pretty way
     {
         "folke/trouble.nvim",
