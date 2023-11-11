@@ -44,3 +44,10 @@ if vim.g.neovide then
     vim.o.guifont = "FiraCode Nerd Font:h10"
 end
 
+-- Custom highlights
+vim.cmd([[
+    augroup illuminate_augroup
+        autocmd!
+        autocmd VimEnter * hi link illuminateWordText CursorLine
+    augroup end
+]])

@@ -24,6 +24,7 @@ require("lazy").setup({
 require("custom.alpha_config")
 require("custom.better-escape_config")
 require("custom.bufferline_config")
+require("custom.catppuccin_config")
 require("custom.comments_config")
 require("custom.colorizer_config")
 require("custom.fidget_config")
