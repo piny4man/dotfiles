@@ -32,7 +32,7 @@ cmp.setup({
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<M-CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<C-CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ["<Tab>"] = vim.schedule_wrap(function(fallback)
             if cmp.visible() and has_words_before() then
                 cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
@@ -52,7 +52,7 @@ cmp.setup({
     formatting = {
         format = lspkind.cmp_format({
             mode = 'symbol_text',
-            maxwidth = 50,
+            maxwidth = 75,
             ellipsis_char = '...',
             symbol_map = {
                 Text = "󰉿",
