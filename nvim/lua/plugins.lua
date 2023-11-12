@@ -1,12 +1,12 @@
 return {
     {
-        "catppuccin/nvim",
-        name = "catppuccin-macchiato",
+        'catppuccin/nvim',
+        name = 'catppuccin-macchiato',
         priority = 1000,
     },
     {
-        "folke/todo-comments.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        'folke/todo-comments.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' },
         opts = {
             signs = true,
             sign_priority = 8
@@ -31,8 +31,8 @@ return {
     },
     -- Troubles messages in a pretty way
     {
-        "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
+        'folke/trouble.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         opts = {
             -- your configuration comes here
             -- or leave it empty to use the default settings
@@ -41,7 +41,7 @@ return {
     },
     -- Other DEV dependencies
     {
-        "folke/neodev.nvim", opts = {}
+        'folke/neodev.nvim', opts = {}
     },
     -- Fuzzy finder
     {
@@ -73,11 +73,11 @@ return {
     },
     -- File Tree
     {
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
+        'nvim-tree/nvim-tree.lua',
+        version = '*',
         lazy = false,
         dependencies = {
-            "nvim-tree/nvim-web-devicons",
+            'nvim-tree/nvim-web-devicons',
         },
     },
     -- Alpha dashboard
@@ -126,29 +126,29 @@ return {
     -- keeping track of open buffers, window arrangement, and more.
     -- You can restore sessions when returning through the dashboard.
     {
-        "folke/persistence.nvim",
-        event = "BufReadPre",
+        'folke/persistence.nvim',
+        event = 'BufReadPre',
         opts = {
             options = {
-                "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp"
+                'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprt'
             }
         },
         -- stylua: ignore
         keys = {
-            { "<leader>qs", function() require("persistence").load() end,                desc = "Restore Session" },
-            { "<leader>ql", function() require("persistence").load({ last = true }) end, desc = "Restore Last Session" },
+            { '<leader>qs', function() require('persistence').load() end,                desc = 'Restore Session' },
+            { '<leader>ql', function() require('persistence').load({ last = true }) end, desc = 'Restore Last Session' },
             {
-                "<leader>qd",
-                function() require("persistence").stop() end,
+                '<leader>qd',
+                function() require('persistence').stop() end,
                 desc =
-                "Don't Save Current Session"
+                'Don\'t Save Current Sessio'
             },
         },
     },
     -- library used by other plugins
-    { "nvim-lua/plenary.nvim", lazy = true },
+    { 'nvim-lua/plenary.nvim', lazy = true },
     {
-        "lewis6991/gitsigns.nvim",
+        'lewis6991/gitsigns.nvim',
     },
     -- Color highlighter
     {
@@ -189,26 +189,28 @@ return {
         'rcarriga/nvim-dap-ui',
         lazy = true
     },
-    -- Autocomplete
-    {
-        'hrsh7th/cmp-nvim-lsp',
-    },
-    {
-        'hrsh7th/cmp-buffer',
-    },
-    {
-        'hrsh7th/cmp-path',
-    },
-    {
-        'hrsh7th/cmp-cmdline',
-    },
+    -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
+        event = 'InsertEnter',
+        dependencies = {
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'L3MON4D3/LuaSnip',
+            'saadparwaiz1/cmp_luasnip',
+            'rafamadriz/friendly-snippets',
+            'onsails/lspkind.nvim',
+            'hrsh7th/cmp-emoji',
+            'zbirenbaum/copilot-cmp',
+        }
     },
+    -- Copilot
     {
-        'L3MON4D3/LuaSnip'
+        'zbirenbaum/copilot.lua'
     },
+    -- Trouble: errors, warnings and hints
     {
-        'rafamadriz/friendly-snippets'
+        'folke/trouble.nvim',
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 }
