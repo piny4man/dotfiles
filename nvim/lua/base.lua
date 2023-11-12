@@ -54,3 +54,14 @@ vim.cmd([[
 
 -- Copilot custom cmp group
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
+
+-- Custom Diagnostic
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
+
+vim.cmd [[ autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false, border="single"}) ]]
