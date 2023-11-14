@@ -14,5 +14,8 @@ require("bufferline").setup({
             separator = true,
         },
         diagnostics = "nvim_lsp",
+        offsets = {
+            filetype = 'NvimTree',
+        }
     }
 })

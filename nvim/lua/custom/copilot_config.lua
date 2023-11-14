@@ -5,9 +5,9 @@ require("copilot").setup({
         keymap = {
             jump_prev = "[[",
             jump_next = "]]",
-            accept = "<C-CR>",
+            accept = "<CR>",
             refresh = "gr",
-            open = "<leader-CR>"
+            open = "<M-CR>"
         },
         layout = {
             position = 'right',
