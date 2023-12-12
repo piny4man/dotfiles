@@ -33,6 +33,9 @@ cmp.setup({
             luasnip.lsp_expand(args.body)
         end,
     },
+    view = {
+        entries = { name = 'custom', selection_order = 'near_cursor' }
+    },
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
@@ -58,6 +61,7 @@ cmp.setup({
         { name = 'buffer' },
         { name = 'path' },
         { name = 'emoji' },
+        { name = 'rg' },
     }),
     formatting = {
         format = lspkind.cmp_format({
@@ -91,6 +95,7 @@ cmp.setup({
                 Operator = "󰆕",
                 TypeParameter = "",
                 Copilot = "",
+                RG = "󰈞",
             },
         })
     },

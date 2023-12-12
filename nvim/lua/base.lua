@@ -3,6 +3,7 @@ vim.opt.swapfile = false
 -- Show relative line numbers
 vim.opt.number = true
 vim.opt.rnu = false
+vim.o.cursorline = true
 
 -- Show ruler
 vim.opt.ruler = true
@@ -65,4 +66,3 @@ vim.diagnostic.config({
 })
 vim.o.updatetime = 500
 vim.cmd [[ autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false, border="single"}) ]]
-

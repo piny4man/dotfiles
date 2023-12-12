@@ -202,6 +202,7 @@ return {
             'onsails/lspkind.nvim',
             'hrsh7th/cmp-emoji',
             'zbirenbaum/copilot-cmp',
+            'lukas-reineke/cmp-rg',
         }
     },
     -- Copilot
