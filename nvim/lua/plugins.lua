@@ -12,10 +12,6 @@ return {
             sign_priority = 8
         },
     },
-    -- Highlighter
-    {
-        'RRethy/vim-illuminate',
-    },
     -- Auto pair
     {
         'echasnovski/mini.pairs', version = '*'
