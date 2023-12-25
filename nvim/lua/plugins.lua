@@ -12,6 +12,10 @@ return {
             sign_priority = 8
         },
     },
+    -- Notifications
+    {
+        'rcarriga/nvim-notify'
+    },
     -- Auto pair
     {
         'echasnovski/mini.pairs', version = '*'
@@ -19,6 +23,10 @@ return {
     -- Movement
     {
         'echasnovski/mini.move', version = '*'
+    },
+    -- Trailspace
+    {
+        'echasnovski/mini.trailspace', version = '*'
     },
     -- Multi selection
     {
@@ -185,6 +193,10 @@ return {
         'rcarriga/nvim-dap-ui',
         lazy = true
     },
+    {
+        'theHamsta/nvim-dap-virtual-text',
+        lazy = true
+    },
     -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
@@ -209,5 +221,11 @@ return {
     {
         'folke/trouble.nvim',
         dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    -- Indent lines
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        main = "ibl",
+        opts = {}
     },
 }

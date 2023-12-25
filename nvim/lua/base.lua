@@ -40,18 +40,15 @@ vim.cmd([[
   augroup END
 ]])
 
+-- Notifications
+-- vim.notify = require("notify")
+
 -- Neovide custom configuration
 if vim.g.neovide then
-    vim.o.guifont = "FiraCode Nerd Font:h10"
+    vim.o.guifont = "0xProto Nerd Font Mono:h7"
+    vim.g.neovide_cursor_antialiasing = true -- Nevovide cursor Antialiasing
+    vim.g.neovide_cursor_vfx_mode = "ripple" -- Neovide
 end
-
--- Custom highlights
-vim.cmd([[
-    augroup illuminate_augroup
-        autocmd!
-        autocmd VimEnter * hi link illuminateWordText CursorLine
-    augroup end
-]])
 
 -- Copilot custom cmp group
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
@@ -66,3 +63,7 @@ vim.diagnostic.config({
 })
 vim.o.updatetime = 500
 vim.cmd [[ autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false, border="single"}) ]]
+
+-- Multiple cursors
+vim.g.VM_theme = 'purplegray'
+
