@@ -40,9 +40,6 @@ vim.cmd([[
   augroup END
 ]])
 
--- Notifications
--- vim.notify = require("notify")
-
 -- Neovide custom configuration
 if vim.g.neovide then
     vim.o.guifont = "0xProto Nerd Font Mono:h7"
