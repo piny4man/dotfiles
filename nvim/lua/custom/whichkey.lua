@@ -1,4 +1,5 @@
 local status_ok, which_key = pcall(require, "which-key")
+local telescope_builtin = require('telescope.builtin')
 if not status_ok then
     return
 end
@@ -43,7 +44,7 @@ local setup = {
         scroll_up = "<c-u>",   -- binding to scroll up inside the popup
     },
     window = {
-        border = "none",       -- none, single, double, shadow
+        border = "none",          -- none, single, double, shadow
         position = "bottom",      -- bottom, top
         margin = { 1, 0, 1, 0 },  -- extra window margin [top, right, bottom, left]
         padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
@@ -53,7 +54,7 @@ local setup = {
         height = { min = 4, max = 25 },                                           -- min and max height of the columns
         width = { min = 20, max = 50 },                                           -- min and max width of the columns
         spacing = 2,                                                              -- spacing between columns
-        align = "center",                                                           -- align columns left, center or right
+        align = "center",                                                         -- align columns left, center or right
     },
     ignore_missing = true,                                                        -- enable this to hide mappings for which you didn't specify a label
     hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
@@ -87,7 +88,7 @@ local mappings = {
     ["p"] = { "<cmd>Lazy<CR>", "Plugin Manager" },        -- Invoking plugin manager
     ["q"] = { "<cmd>wqall!<CR>", "Quit" },                -- Quit Neovim after saving the file
     ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
-    ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
+    ["w"] = { "<cmd>w!<CR>", "Save" },                    -- Save current file
 
     --Git
     g = {
@@ -129,20 +130,21 @@ local mappings = {
     -- Telescope
     f = {
         name = "File Search",
-        c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-        f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find files" },
-        t = { "<cmd>Telescope live_grep <cr>", "Find Text Pattern" },
-        r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
+        c = { telescope_builtin.colorscheme, "Colorscheme" },
+        f = { telescope_builtin.find_files, "Find files" },
+        g = { telescope_builtin.live_grep, "Find Text Pattern" },
+        b = { telescope_builtin.buffers, "Open Files" },
+        h = { telescope_builtin.help_tags, "Help tags"},
     },
 
-    s = {
-        name = "Search",
-        h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-        m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-        r = { "<cmd>Telescope registers<cr>", "Registers" },
-        k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-        c = { "<cmd>Telescope commands<cr>", "Commands" },
-    },
+    -- s = {
+    --     name = "Search",
+    --     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    --     m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    --     r = { "<cmd>Telescope registers<cr>", "Registers" },
+    --     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+    --     c = { "<cmd>Telescope commands<cr>", "Commands" },
+    -- },
 }
 
 which_key.setup(setup)
