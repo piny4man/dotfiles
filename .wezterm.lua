@@ -12,15 +12,32 @@ end
 
 config.use_fancy_tab_bar = false
 -- This is where you actually apply your config choices
+
+-- WINDOW
 config.window_frame = {
-    active_titlebar_bg = '#181926',
-    inactive_titlebar_bg = '#363a4f'
+    active_titlebar_bg = '#b7bdf8',
+    inactive_titlebar_bg = '#8087a2'
 }
+config.window_padding = {
+    left = '0.5cell',
+    right = '0.5cell',
+    top = 0,
+    bottom = 0,
+}
+config.window_background_opacity = 0.95
+
+-- THEME
 config.color_scheme = 'Catppuccin Macchiato'
 
-config.font = wezterm.font "0xProto Nerd Font Mono"
-config.text_background_opacity = 0.75
+-- FONT
+config.font = wezterm.font '0xProto Nerd Font Mono'
+config.text_background_opacity = 1
+config.harfbuzz_features = { 'zero', 'ss01', 'cv05' }
 
+-- CURSOR
+config.default_cursor_style = 'SteadyUnderline'
+
+-- KEYMAPS
 config.leader = { key = "LeftShift", mods = "CTRL", timeout_milliseconds = 100 }
 config.keys = {
     {
@@ -43,11 +60,11 @@ config.keys = {
         mod = 'LEADER',
         action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
     },
-    {
-        key = 'k',
-        mod = 'LEADER',
-        action = wezterm.action.CloseCurrentPane { confirm = true },
-    },
+    -- {
+    --     key = 'k',
+    --     mod = 'LEADER',
+    --     action = wezterm.action.CloseCurrentPane { confirm = true },
+    -- },
 }
 
 return config
