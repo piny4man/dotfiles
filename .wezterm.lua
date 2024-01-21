@@ -31,6 +31,7 @@ config.color_scheme = 'Catppuccin Macchiato'
 
 -- FONT
 config.font = wezterm.font '0xProto Nerd Font Mono'
+config.font_size = 12.0
 config.text_background_opacity = 1
 config.harfbuzz_features = { 'zero', 'ss01', 'cv05' }
 
