@@ -52,20 +52,10 @@ config.keys = {
         action = wezterm.action.SpawnTab 'CurrentPaneDomain',
     },
     {
-        key = 'PageUp',
+        key = 'k',
         mod = 'LEADER',
-        action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+        action = wezterm.action.CloseCurrentPane { confirm = true },
     },
-    {
-        key = 'PageDown',
-        mod = 'LEADER',
-        action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
-    },
-    -- {
-    --     key = 'k',
-    --     mod = 'LEADER',
-    --     action = wezterm.action.CloseCurrentPane { confirm = true },
-    -- },
 }
 
 return config
