@@ -4,7 +4,7 @@ require 'nvim-treesitter.configs'.setup {
         "tsx", "yaml",
         "html", "css", "bash", "prisma", "graphql", "markdown", "markdown_inline", "dockerfile", "gitignore", "json",
         "json5", "comment",
-        "svelte", "astro", "sql", "regex" },
+        "svelte", "astro", "sql", "regex", "angular" },
     sync_install = true,
     auto_install = true,
     ignore_install = { "" },

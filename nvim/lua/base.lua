@@ -1,3 +1,7 @@
+-- netrw disable
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.swapfile = false
 
 -- Show relative line numbers
@@ -21,7 +25,7 @@ vim.opt.tabstop = 4
 vim.cmd [[
 augroup FileExtensionSettings
     autocmd!
-    autocmd BufRead,BufNewFile *.js,*.ts,*.tsx,*.jsx,*.svelte,*.astro setlocal shiftwidth=2
+    autocmd BufRead,BufNewFile *.js,*.ts,*.tsx,*.jsx,*.svelte,*.astro,*.json setlocal shiftwidth=2
     autocmd BufRead,BufNewFile *.html setlocal shiftwidth=2
 augroup END
 ]]
@@ -32,6 +36,7 @@ vim.opt.expandtab = true
 -- Identing
 vim.opt.smartindent = true
 vim.opt.smarttab = true
+
 -- Restore cursor on exit
 vim.cmd([[
   augroup RestoreCursorShapeOnExit
@@ -64,3 +69,18 @@ vim.cmd [[ autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false,
 -- Multiple cursors
 vim.g.VM_theme = 'purplegray'
 
+-- Autoclose tree on file open
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+    callback = function()
+        -- Delay execution to ensure it runs after the event loop
+        vim.schedule(function()
+            -- Check if nvim-tree is open
+            if require("nvim-tree.view").is_visible() then
+                -- Close nvim-tree
+                require("nvim-tree.api").tree.close()
+                -- Optionally, focus on the main window (the file opened)
+                vim.cmd("wincmd p")
+            end
+        end)
+    end,
+})
