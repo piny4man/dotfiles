@@ -9,9 +9,10 @@ require("nvim-tree").setup {
                 git = true,
             },
         },
+        group_empty = true,
     },
     view = {
-        side = "left",
+        side = "right",
     },
     filters = {
         custom = { "^.git$" },
@@ -20,5 +21,5 @@ require("nvim-tree").setup {
     git = {
         enable = true,
         ignore = false,
-    }
+    },
 }

@@ -134,8 +134,9 @@ local mappings = {
         f = { telescope_builtin.find_files, "Find files" },
         g = { telescope_builtin.live_grep, "Find Text Pattern" },
         b = { telescope_builtin.buffers, "Open Files" },
-        h = { telescope_builtin.help_tags, "Help tags"},
+        h = { telescope_builtin.help_tags, "Help tags" },
     },
+
 
     -- s = {
     --     name = "Search",

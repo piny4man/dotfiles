@@ -1,3 +1,5 @@
+local autoSessionName = require('auto-session.lib').current_session_name
+
 require('lualine').setup {
     options = {
         icons_enabled = true,
@@ -20,7 +22,7 @@ require('lualine').setup {
     sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
+        lualine_c = { autoSessionName },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }

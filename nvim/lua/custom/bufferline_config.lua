@@ -31,12 +31,6 @@ bufferline.setup {
         show_duplicate_prefix = true,
         persis_buffer_sort = true,
         move_wraps_at_ends = false,
-        offsets = {
-            {
-                filetype = "NvimTree",
-                separator = false,
-            }
-        },
         separator_style = { "", "" },
         enforce_regular_tabs = true,
         always_show_bufferline = true,
