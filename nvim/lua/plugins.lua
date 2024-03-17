@@ -213,4 +213,8 @@ return {
         main = "ibl",
         opts = {}
     },
+    -- Html autoclose tag
+    {
+        'windwp/nvim-ts-autotag'
+    }
 }

@@ -22,6 +22,7 @@ require("lazy").setup({
 })
 -- Custom configuration
 require("custom.alpha_config")
+require("custom.autotag")
 require("custom.auto-session")
 require("custom.better-escape_config")
 require("custom.bufferline_config")

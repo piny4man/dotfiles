@@ -39,7 +39,14 @@ bufferline.setup {
             delay = 150,
             reveal = { 'close' }
         },
-        sort_by = 'extension',
+        sort_by = 'directory',
+        custom_filter = function(buf_number)
+            local buf_name = vim.fn.bufname(buf_number)
+            if buf_name:match("NvimTree_") then
+                return false
+            end
+            return true
+        end,
     },
     highlights = {
         fill = {
