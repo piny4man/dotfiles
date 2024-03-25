@@ -1,0 +1,5 @@
+theme = "Piny4man"
+long_kernel = true
+physical_cores = false
+# disk_space_percentage = true
+interface = "wlan0"
